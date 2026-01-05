@@ -26,7 +26,7 @@ layout: base
                 </div>
                 <div class="post-category">
                     <h2>CATEGORY</h2>
-                    <a class="category" href="/category/{{ page.category }}">{{ page.category }}</a>
+                    <a class="category" href="/category/{{ page.category | downcase }}">{{ page.category }}</a>
                 </div>
                 <div class="post-management">
                     <h2>CONTENT</h2>
@@ -76,7 +76,7 @@ layout: base
                             <h2>TAGS</h2>
                             {% if page.tags %} 
                                 {% for tag in page.tags %}
-                                    <a href="/tag/{{ tag }}" rel="tag">{{ tag }}</a>
+                                    <a href="/tag/{{ tag | downcase }}" rel="tag">{{ tag }}</a>
                                 {% endfor %} 
                             {% endif %}
                         </div>
