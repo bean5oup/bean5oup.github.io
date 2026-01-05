@@ -1,0 +1,134 @@
+---
+layout: base
+---
+
+<section class="container">
+    <article id="content">
+        <div class="inner">
+            <div class='entry-header'>
+                <div class='entry-header-thumb' style="background-image: url({{ page.background }});">
+                    <h1>{{ page.title }}</h1>
+                </div>
+                <p class='entry-excerpt'>
+                    <b>
+                        {{ page.excerpt }}
+                    </b>
+                </p>
+            </div>
+            <div class='entry-hgroup'>
+                <div class="post-date">
+                    <h2>DATE</h2>
+                    <span class="date"><a href="">{{ page.date | date:'%d %b %Y' }}</a></span>
+                </div>
+                <div class="post-author">
+                    <h2>AUTHOR</h2>
+                    <span class="author"><a href="">{{ page.author }}</a></span>
+                </div>
+                <div class="post-category">
+                    <h2>CATEGORY</h2>
+                    <a class="category" href="/category/{{ page.category }}">{{ page.category }}</a>
+                </div>
+                <div class="post-management">
+                    <h2>CONTENT</h2>
+                </div>
+            </div>
+            <div class="hgroup">
+                <div class="post-meta">
+                </div>
+            </div>
+            <div class="inner2">
+            <div>
+                <div class="entry-content">
+                    {{ content }}
+                </div>
+                
+                <div class="comments">
+                    <div class="entry-meta">
+                        <div class="post-share">
+                            <h2>SHARE</h2>
+                            <ul>
+                                <li class="github">
+                                    <a href="https://github.com/bean5oup">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="https://twitter.com/bean5oup">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="email">
+                                    <a href="bean3oup@gmail.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li class="discord">
+                                    <a href="https://discordapp.com/channels/@me/bean5oup/">
+                                        <i class="fa-brands fa-discord"></i>
+                                    </a>
+                                </li>
+                                <li class="url">
+                                    <a href="">+</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="post-tags">
+                            <h2>TAGS</h2>
+                            {% if page.tags %} 
+                                {% for tag in page.tags %}
+                                    <a href="/tag/{{ tag }}" rel="tag">{{ tag }}</a>
+                                {% endfor %} 
+                            {% endif %}
+                        </div>
+                        <div class="post-categories">
+                            <h2>CATEGORIES</h2>
+                            <s_article_related>
+                                <div class="related-articles">
+                                    <!-- <h2><strong>'[##_article_rep_category_##]'</strong> Related Articles</h2> -->
+                                    <ul>
+                                        <!-- <s_article_related_rep>
+                                            <li>
+                                                <a href="[##_article_related_rep_link_##]">
+                                                    <span class="thum">
+                                                        <s_article_related_rep_thumbnail>
+                                                            <img src="//i1.daumcdn.net/thumb/C264x200/?fname=[##_article_related_rep_thumbnail_link_##]" alt="">
+                                                        </s_article_related_rep_thumbnail>
+                                                    </span>
+                                                    <span class="title">[##_article_related_rep_title_##]</span>
+                                                </a>
+                                            </li>
+                                        </s_article_related_rep> -->
+                                        {% assign category = page.category | default: '' %}
+                                        {% for post in site.categories[category] %}
+                                            {% if post.url != page.url %}
+                                                <li>
+                                                    <a href="{{ site.baseurl }}{{ post.url }}">
+                                                        <span class="thum">
+                                                            {% if post.thumb %} 
+                                                                <img src="{{ post.thumb | relative_url }}" alt="">
+                                                            {% endif %}
+                                                        </span>
+                                                        <span class="title">{{ post.title }}</span>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </s_article_related>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </article>
+    <div class="toc_container">
+        <div class="toc_padding"></div>
+        <div class="toc">
+            <div class="toc_btn"></div>
+        {% include toc.html html=content %}
+        </div>
+    </div>
+</section>
+<script src="/assets/js/progress.js"></script>

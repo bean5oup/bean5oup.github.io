@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href={{ "/assets/css/high-lighting.css" | relative_url }}>
+    <link rel="stylesheet" href={{ "/assets/css/post-style.css" | relative_url }}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script> -->
+
+    <title>{{ page.title }}</title>
+</head>
+
+<!-- <body id="[##_body_id_##]" class="<s_if_var_color-type>[##_var_color-type_##]</s_if_var_color-type><s_if_var_post-type> [##_var_post-type_##]</s_if_var_post-type><s_if_var_view-more> paging-view-more</s_if_var_view-more>"> -->
+<body id="[##_body_id_##]" class="<s_if_var_color-type>[##_var_color-type_##]</s_if_var_color-type> post-type-thumbnail <s_if_var_view-more> paging-view-more</s_if_var_view-more>">
+<script src="/assets/js/util.js"></script>
+<div id="wrap">
+	<header id="header">
+		<div class="progress-container">
+			<div class="progress-bar"></div>
+		</div>
+		<button type="button" class="mobile-menu" onclick="location.href='/';"><span>메뉴</span></button>
+		<div class="menu">
+			<nav id="gnb">
+				<div class="playerAvatarBox">
+					<a href='/' class='custom_link_tit'>
+			  		<div class="playerAvatar">
+							<div class="playerAvatarAutoSizeInner">
+								<div class="profile_avatar_frame">
+								<img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/601220/4957cc68eec4c2d9ee1df6de65f073951d1e94ee.png">
+							</div>
+							<img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/620/9b150c165611e0f04ac9edb860656d7e67d56fbe.gif">
+						</div>
+					</div>
+				    </a>
+				</div>
+			</nav>
+		</div>
+		<!-- <div class="search">
+			<s_search>
+                <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" placeholder="검색내용을 입력하세요." onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }">
+                <button type="submit" onclick="[##_search_onclick_submit_##]">검색</button>
+            </s_search>
+		</div> -->
+	</header>
+	{{ content }}
+	<footer id="footer">
+		<div class="inner">
+			<p class="copyright">POWERED BY <a href="#">TOAST</a></p>
+			<p class="aboutMe">© 2026 <a class="myGithub" href="#">BEAN5OUP</a>. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</div>
+<!-- <script src="/assets/js/script2.js"></script> -->
+<!-- <script src="/assets/js/thumb30.js"></script> -->
+</body>
+</html>
