@@ -413,6 +413,7 @@ code {
 	font-family: "Source Code Pro",monospace;
 	/* font-family: "Consolas", "Sans Mono", "courier", "monospace"; */
 	color: #000;
+	overflow-wrap: break-word;
 }
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
 	display: block;
@@ -2140,6 +2141,7 @@ section.container {
 .entry-content a {
 	color: #245dc1;
 	text-decoration: none;
+	overflow-wrap: break-word;
 }
 .entry-content a:visited {
 	color: #7759ae !important;
