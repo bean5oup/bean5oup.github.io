@@ -32,10 +32,10 @@ layout: base
                     <h2>CONTENT</h2>
                 </div>
             </div>
-            <div class="hgroup">
+            <!-- <div class="hgroup">
                 <div class="post-meta">
                 </div>
-            </div>
+            </div> -->
             <div class="inner2">
             <div>
                 <div class="entry-content">
@@ -99,18 +99,24 @@ layout: base
                                             </li>
                                         </s_article_related_rep> -->
                                         {% assign category = page.category | default: '' %}
+                                        {% assign count = 0 %}
+
                                         {% for post in site.categories[category] %}
                                             {% if post.url != page.url %}
                                                 <li>
                                                     <a href="{{ site.baseurl }}{{ post.url }}">
                                                         <span class="thum">
-                                                            {% if post.thumb %} 
+                                                            {% if post.thumb != "" %} 
                                                                 <img src="{{ post.thumb | relative_url }}" alt="">
                                                             {% endif %}
                                                         </span>
                                                         <span class="title">{{ post.title }}</span>
                                                     </a>
                                                 </li>
+                                                {% assign count = count | plus: 1 %}
+                                                {% if count == 4 %}
+                                                    {% break %}
+                                                {% endif %}
                                             {% endif %}
                                         {% endfor %}
                                     </ul>

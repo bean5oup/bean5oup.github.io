@@ -32,3 +32,13 @@ $('.toc_btn')?.addEventListener('click', (e) => {
 })
 
 window.onscroll = () => progressBar();
+
+for(let e of $$('.entry-content h1, .entry-content h2:not(.screen_out), .entry-content h3, .entry-content h4')) {
+    let aTag = document.createElement('a');
+    aTag.className = 'h';
+    aTag.href = `#${encodeURI(e.innerText)}`;
+    aTag.innerHTML = `
+        <span></span>
+    `;
+    e.prepend(aTag);
+}
