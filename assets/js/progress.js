@@ -1,18 +1,32 @@
 let color = ['#ce0070', '#5a27eb']
 
-$('.progress-bar').style.background = color[parseInt(Math.random()*100/50)];
+$('.progress-bar').style.background = color[Math.floor(Math.random() * color.length)];
 
 function progressBar() {
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  let scrolled = (winScroll / height) * 100;
-  $('.progress-bar').style.width = scrolled + "%";
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    progressEl.style.width = scrolled + "%";
+}
+
+function mark() {
+    let y = window.scrollY;
+
+    for (let i = 0; i < headingTops.length; i++) {
+        if (y <= headingTops[i]) {
+            let idx = i - 1;
+            curMark?.classList.remove('active');
+            curMark = toc_headings[idx];
+            curMark?.classList.add('active');
+            return;
+        }
+    }
 }
 
 const backupWidth = $('.toc')?.clientWidth;
 const backupHeight = $('.toc')?.clientHeight;
 
-    //toc hide and show
+//toc hide and show
 $('.toc_btn')?.addEventListener('click', (e) => {
     let toc = $('.toc').style;
 
@@ -31,14 +45,60 @@ $('.toc_btn')?.addEventListener('click', (e) => {
     }
 })
 
-window.onscroll = () => progressBar();
+let headingTops = [];
+const headings = [
+    ...$$('.entry-content h1, .entry-content h2:not(.screen_out), .entry-content h3, .comments')
+];
+const toc_headings = [
+    ...$$('.toc a')
+];
+let curMark;
+const progressEl = $('.progress-bar');
 
-for(let e of $$('.entry-content h1, .entry-content h2:not(.screen_out), .entry-content h3, .entry-content h4')) {
-    let aTag = document.createElement('a');
-    aTag.className = 'h';
-    aTag.href = `#${encodeURI(e.innerText)}`;
-    aTag.innerHTML = `
-        <span></span>
-    `;
-    e.prepend(aTag);
-}
+const computeHeadingTops = () => {
+    headingTops = headings.map(
+        h => Math.floor(h.getBoundingClientRect().top + window.scrollY)
+    );
+
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    headingTops.push(height);
+};
+
+(async () => {
+    // const observer = new IntersectionObserver
+    let initialized = false;
+
+    for(let e of $$('.entry-content h1, .entry-content h2:not(.screen_out), .entry-content h3, .entry-content h4')) {
+        let aTag = document.createElement('a');
+        aTag.className = 'h';
+        aTag.href = `#${encodeURI(e.innerText)}`;
+        aTag.innerHTML = `
+            <span></span>
+        `;
+        e.prepend(aTag);
+    }
+
+    window.onscroll = () => {
+        progressBar();
+        if(initialized)
+            mark();
+    };
+
+    await document.fonts.ready;
+    computeHeadingTops();
+    initialized = true;
+    mark();
+    
+    let resizeTicking = false;
+
+    window.addEventListener('resize', () => {
+        if (!resizeTicking) {
+            requestAnimationFrame(() => {
+                computeHeadingTops();
+                resizeTicking = false;
+            });
+            resizeTicking = true;
+        }
+    });
+})();
+

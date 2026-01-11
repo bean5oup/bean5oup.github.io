@@ -11,11 +11,12 @@
 }
 ::-webkit-scrollbar {
     width: 0px;
-		height: 8px;
+	height: 5px;
     background: none;
 }
 ::-webkit-scrollbar-thumb {
 	background-color: #666;
+	border-radius: 5px;
 }
 
 /*
@@ -120,8 +121,8 @@ hr {
     bottom left/
     var(--underline-width, 0%) 2px
     no-repeat;
-  text-decoration: none;
-  transition: background-size 0.5s;
+	text-decoration: none;
+	transition: background-size 0.5s;
 }
 
 .toc a:hover {
@@ -768,10 +769,14 @@ section.container {
 	text-decoration: none;
 }
 .toc a:visited {
-	color: #7759ae !important;
+	/* color: #7759ae !important; */
 }
 .toc a:hover {
 	/* text-decoration: underline; */
+}
+.toc a.active {
+	color: #7759ae;
+	--underline-width: 100%;
 }
 .toc_padding {
 	height: 720px;
