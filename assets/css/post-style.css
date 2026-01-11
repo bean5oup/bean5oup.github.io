@@ -2705,6 +2705,7 @@ path {
 	margin-bottom: 10px;
     display: block;
 	font-size: calc(.9em * var(--var-zoom));
+	word-break: break-word;
 }
 
 @media (max-width: 1300px) {
