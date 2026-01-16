@@ -1,6 +1,5 @@
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
-.highlighter-rouge .highlight { background: #eef; }
 .highlight .c { color: #998; font-style: italic; }
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
 .highlight .k { font-weight: bold; }
@@ -70,6 +69,6 @@
 	background-color: #fafafa;
 	border: 1px solid #ccc;
 	overflow-x: auto;
-	border-radius: 0;
+	border-radius: 5px;
 	white-space: pre;
 }

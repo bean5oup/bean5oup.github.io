@@ -79,7 +79,6 @@ code {
 	border-radius: 4px;
 	font-family: "Source Code Pro",monospace;
 	/* font-family: "Consolas", "Sans Mono", "courier", "monospace"; */
-	color: #000;
 	overflow-wrap: break-word;
 }
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
@@ -1742,8 +1741,8 @@ section.container {
 	display: block;
 	max-width: 100%;
 	height: auto;
-	/* margin-top: 36px; */
 	margin: auto;
+	border-radius: 5px;
 }
 .entry-content hr {
 	display: block;
@@ -2702,6 +2701,10 @@ section.container {
 	margin: 30px auto
 }
 
+strong {
+	color: #245dc1;
+}
+
 path {
 	color: #7d7a75;
 	margin-bottom: 10px;
@@ -2710,7 +2713,21 @@ path {
 	word-break: break-word;
 }
 
-@media (max-width: 1300px) {
+sidenote {
+	margin-right: -260px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 240px;
+	text-align: left;
+	line-height: 1.5em;
+	font-size: .9rem;
+	color: #808080;
+}
+sidenote code {
+	padding-top: 1px;
+}
+@media (max-width: 1340px) {
 	sidenote {
 		display: block;
 		margin: 10px 0;
@@ -2719,23 +2736,11 @@ path {
 		padding: .8em;
 		color: gray;
 		font-size: calc(.9em * var(--var-zoom));
+		position: unset;
+		width: unset;
+		border-radius: 5px
 	}
-}
-
-@media (min-width: 1300px) {
-	sidenote {
-		margin-right: -260px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 240px;
-        text-align: left;
-        line-height: 1.5em;
-        font-size: .9rem;
-		color: #808080;
+	sidenote code {
+		background-color: #e0e0e0;
 	}
-}
-
-strong {
-	color: #245dc1;
 }
