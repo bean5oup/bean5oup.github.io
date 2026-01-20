@@ -23,6 +23,38 @@ function mark() {
     }
 }
 
+function buildSlugs() {
+    const slugCount = {};
+
+    for(let e of $$('.entry-content h1, .entry-content h2:not(.screen_out), .entry-content h3, .entry-content h4')) {
+        let aTag = document.createElement('a');
+        const baseSlug = encodeURI(
+            e.innerText
+                .toLowerCase()
+                .trim()
+                .replace(/\s+/g, '-')
+        );
+
+        if (slugCount[baseSlug] === undefined) {
+            slugCount[baseSlug] = 0;
+        } else {
+            slugCount[baseSlug]++;
+        }
+
+        const finalSlug =
+        slugCount[baseSlug] === 0
+            ? baseSlug
+            : `${baseSlug}-${slugCount[baseSlug]}`;
+
+        aTag.className = 'h';
+        aTag.href = `#${finalSlug}`;
+        aTag.innerHTML = `
+            <span></span>
+        `;
+        e.prepend(aTag);
+    }
+}
+
 const backupWidth = $('.toc')?.clientWidth;
 const backupHeight = $('.toc')?.clientHeight;
 
@@ -68,15 +100,7 @@ const computeHeadingTops = () => {
     // const observer = new IntersectionObserver
     let initialized = false;
 
-    for(let e of $$('.entry-content h1, .entry-content h2:not(.screen_out), .entry-content h3, .entry-content h4')) {
-        let aTag = document.createElement('a');
-        aTag.className = 'h';
-        aTag.href = `#${encodeURI(e.innerText.toLowerCase().replace(/\s+/g, '-'))}`;
-        aTag.innerHTML = `
-            <span></span>
-        `;
-        e.prepend(aTag);
-    }
+    buildSlugs();
 
     window.onscroll = () => {
         progressBar();

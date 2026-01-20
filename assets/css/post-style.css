@@ -639,16 +639,16 @@ hr {
 
 /* Components */
 a.h {
-		margin-left: -1.5em;
+	margin-left: -1.0em; /* -1.5em */
     display: inline-block;
     margin-top: -1em;
     margin-bottom: -1em;
-    width: 1.5em;
+    width: 1.0em;
     font-weight: normal;
 }
 a.h span{
 	display: inline-block;
-	width: 1.5em;
+	width: 1.0em;
 }
 a.h:hover,
 .entry-content h1:hover a.h span:before,
