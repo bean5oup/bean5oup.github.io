@@ -32,6 +32,7 @@ function buildSlugs() {
             e.innerText
                 .toLowerCase()
                 .trim()
+                .replace(/[^a-z0-9\s-_]/g, '')
                 .replace(/\s+/g, '-')
         );
 
