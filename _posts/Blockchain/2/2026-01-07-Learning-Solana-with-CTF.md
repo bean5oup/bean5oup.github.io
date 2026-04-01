@@ -528,7 +528,7 @@ r.stream()
 
 
 ### Reference
-[0] [https://osec.io/blog/2025-05-14-king-of-the-sol](https://osec.io/blog/2025-05-14-king-of-the-sol) <sidenote>Interestingly, GPT gave me this reference while I was searching for why the native loader cannot receive SOL.</sidenote>
+[1] [https://osec.io/blog/2025-05-14-king-of-the-sol](https://osec.io/blog/2025-05-14-king-of-the-sol) <sidenote>Interestingly, GPT gave me this reference while I was searching for why the native loader cannot receive SOL.</sidenote>
 
 ## pwn/cut-and-run
 
@@ -640,16 +640,16 @@ In conclusion, both operate at compile time, but declarative macros perform code
 I will briefly summarize the **custom derive macro** example code shown in the doc, along with the `Cargo.toml`.
 
 ```bash
-hello_macro
-├── hello_macro_derive
-│   ├── src
+hello_macro/
+├── hello_macro_derive/
+│   ├── src/
 │   │   └── lib.rs
 │   └── Cargo.toml
-├── src
+├── src/
 │   └── lib.rs
 └── Cargo.toml
-pancakes
-├── src
+pancakes/
+├── src/
 │   └── main.rs
 └── Cargo.toml
 ```

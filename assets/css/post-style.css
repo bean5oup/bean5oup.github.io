@@ -1778,7 +1778,7 @@ section.container {
 	/* padding-left: 22px; */
 	/* font-size: calc(14px * var(--var-zoom)); */
 	line-height: 1.6;
-	color: #666;
+	/* color: #666; */
 	list-style: inherit;
 	/* text-indent: -22px; */
 }
@@ -1798,7 +1798,7 @@ section.container {
 .entry-content ol li {
 	position: relative;
 	/* padding-left: 16px; */
-	font-size: calc(14px * var(--var-zoom));
+	/* font-size: calc(14px * var(--var-zoom)); */
 	line-height: 1.6;
 	/* color: #666; */
 	color: #000;
