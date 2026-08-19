@@ -2328,6 +2328,17 @@ section.container {
 
 /* Media Screen - Tablet */
 @media screen and (max-width:1023px) {
+	.entry-info, .entry-excerpt {
+        /* margin: -29px 20px 0px; */
+		margin-left: 20px !important;
+		margin-right: 20px !important;
+    }
+	period {
+		flex-direction: column;
+	}
+	from, to {
+		width: 100% !important;
+	}
 	#header .search.on {
 		width: 180px;
 	}
@@ -2367,6 +2378,9 @@ section.container {
 
 /* Media Screen - Mobie */
 @media screen and (max-width:767px) {
+	.entry-header-thumb ul {
+    	flex-direction: column !important;
+	}
 	.entry-hgroup {
 		margin: 100px auto 0px;
 	}

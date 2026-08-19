@@ -2,7 +2,7 @@
 layout: cv
 title: "Dahoon Jeong"
 permalink: /cv
-excerpt: "Iced Match Mocha Latte"
+excerpt: "Iced Mocha Matcha Latte"
 ---
 
 <h1>SKILLS</h1>
