@@ -1,9 +1,24 @@
 @charset "utf-8";
 
 /* Web Font Load */
-@import url('https://rsms.me/inter/inter.css');
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic-ext,greek-ext,cyrillic,greek,vietnamese,latin-ext");
 @import url("//fonts.googleapis.com/css?family=Source+Code+Pro");
+
+/* @import url('https://rsms.me/inter/inter.css'); */
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/InterVariable.woff2') format('woff2');
+}
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/InterVariable-Italic.woff2') format('woff2');
+}
 
 :root {
 	--var-zoom: 1;
@@ -2743,4 +2758,24 @@ sidenote code {
 	sidenote code {
 		background-color: #e0e0e0;
 	}
+}
+
+#header .cv {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 500;
+}
+
+#header .cv a {
+	text-decoration: none;
+	color: #b7b8b9;
+	font-size: calc(1.25em * var(--var-zoom));
+    line-height: 40px;
+	transition: background-size 0.5s;
+	background: linear-gradient(currentColor 0 0) bottom left / var(--underline-width, 0%) 2px no-repeat;
+}
+
+#header .cv a:hover {
+    --underline-width: 100%;
 }

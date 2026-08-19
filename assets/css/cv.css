@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+:root {
+	--var-width: 980px; /* 980px */
+}
+
+.container {
+    margin-bottom: 300px;
+}
+
+.entry-header-thumb a {
+    padding: 15px 62px;
+    line-height: 1.25;
+    color: white;
+}
+
+.entry-header {
+    margin-bottom: 40px;
+}
+
+.entry-header h1 {
+    font-size: calc(5.25em * var(--var-zoom));
+    max-width: calc(var(--var-width) * var(--var-zoom));
+    padding: 0;
+}
+
+.entry-header-thumb ul {
+    display: flex;
+}
+
+.entry-header-thumb ul li {
+    color: white;
+    list-style: square;
+    list-style-position: inside;
+    margin-right: 35px;
+}
+
+.entry-header-thumb {
+    height: 500px;
+    padding: 106px 0 85px;
+}
+
+.entry-header-thumb a {
+    text-decoration: none;
+    padding: 10px 0 3px 0;
+    transition: background-size 0.5s;
+    background: linear-gradient(currentColor 0 0) bottom left / var(--underline-width, 0%) 2px no-repeat;
+}
+
+.entry-header-thumb a:hover {
+    --underline-width: 100%;
+}
+
+.entry-info {
+    max-width: calc(var(--var-width) * var(--var-zoom));
+    margin: 0 auto;
+    width: 100%;
+}
+
+.entry-excerpt {
+    font-size: inherit;
+}
+
+.entry-content {
+    font-weight: 300;
+}
+
+.entry-content h1 {
+    font-size: 24px;
+    color: blue;
+}
+
+.entry-content h2 {
+    font-size: 16px;
+    margin: initial;
+    font-weight: bold;
+}
+
+.entry-content a {
+    color: initial;
+    text-decoration: none;
+}
+
+.entry-content p {
+    margin-top: 0px !important;
+}
+
+.entry-content a:hover {
+    color: #245dc1;
+    text-decoration: none;
+}
+
+entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.entry-content p {
+    width: 70%;
+}
+
+.entry-content entry p {
+    margin: 0 0 10px 0 !important;
+    width: 50%;
+}
+
+.entry-content entry div {
+    margin: 0 0 10px 0 !important;
+    width: 30%;
+}
+
+period {
+    display: flex;
+    width: 20%;
+}
+
+from {
+    font-weight: bold;
+    width: 45%;
+    display: flex;
+}
+
+from span {
+    width: 45%;
+}
+
+dash {
+    font-weight: bold;
+    width: 10%;
+}
+
+to {
+    font-weight: bold;
+    width: 45%;
+    display: flex;
+}
+
+to span {
+    width: 45%;
+}

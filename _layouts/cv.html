@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, width=device-width">
+    
+	<link rel="preload" href="/assets/fonts/InterVariable.woff2" as="font" type="font/woff2">
+    <link rel="icon" href={{ "/assets/favicon.ico" | relative_url }}>
+    <link rel="stylesheet" href={{ "/assets/css/post-style.css" | relative_url }}>
+    <link rel="stylesheet" href={{ "/assets/css/cv.css" | relative_url }}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script> -->
+
+    <title>bean5oup</title>
+    <script src="/assets/js/util.js"></script>
+</head>
+
+<!-- <body id="[##_body_id_##]" class="<s_if_var_color-type>[##_var_color-type_##]</s_if_var_color-type><s_if_var_post-type> [##_var_post-type_##]</s_if_var_post-type><s_if_var_view-more> paging-view-more</s_if_var_view-more>"> -->
+<body id="[##_body_id_##]" class="post-type-list">
+    <div id="wrap">
+        <header id="header">
+            <button type="button" class="mobile-menu" onclick="location.href='/';"><span>메뉴</span></button>
+            <div class="menu">
+            </div>
+            <div class="cv">
+                <a href='/cv'>CV</a>
+            </div>
+        </header>
+
+        <section class="container">
+            <article id="content">
+                <div class="inner">
+                    <div class='entry-header'>
+                        <div class='entry-header-thumb' style="background-image: url({{ page.background }});">
+                            <div class="entry-info">
+                            <h1>{{ page.title }}</h1>
+                            <ul>
+                                <li><a>@bean5oup</a></li>
+                                <li><a>bean3oup@gmail.com</a></li>
+                                <li><a href="https://github.com/bean5oup">Github</a></li>
+                                <li><a href="https://dreamhack.io/users/1719">Dreamhack</a></li>
+                                <li><a href="https://cantina.xyz/u/bean5oup">Cantina</a></li>
+                            </ul>
+                            </div>
+                            
+                            
+                        </div>
+                        <p class='entry-excerpt'>
+                            <b>
+                                {{ page.excerpt }} 
+                            </b>
+                        </p>
+                    </div>
+                    
+                    <!-- <div class="hgroup">
+                        <div class="post-meta">
+                        </div>
+                    </div> -->
+                    <div class="inner2">
+                    <div>
+                        <div class="entry-content">
+                            {{ content }}
+                        </div>
+                        
+                        
+                    </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer id="footer">
+            <div class="inner">
+                <p class="copyright">POWERED BY <a href="#">TOAST</a></p>
+                <p class="aboutMe">© 2026 <a class="myGithub" href="#">콩나물국밥</a>. ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
