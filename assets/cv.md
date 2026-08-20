@@ -85,7 +85,7 @@ a focus on vulnerability research and exploit techniques
         <dash>-</dash>
         <to>
             <span>Jan</span>
-            <span>2025</span>
+            <span>2024</span>
         </to>
     </period>
 </entry>
