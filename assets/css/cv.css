@@ -124,6 +124,7 @@ from {
 
 from span {
     width: 45%;
+    margin-right: 10px;
 }
 
 dash {
@@ -139,4 +140,5 @@ to {
 
 to span {
     width: 45%;
+    margin-right: 10px;
 }

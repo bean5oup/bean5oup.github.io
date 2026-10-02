@@ -1,6 +1,6 @@
 ---
 layout: cv
-title: "Dahoon Jeong"
+title: "DAHOON JEONG"
 permalink: /cv
 excerpt: "Iced Mocha Matcha Latte"
 ---
@@ -165,7 +165,7 @@ Proposed a vulnerability analysis methodology targeting Epic Games’ Unreal Eng
 <h1>REPORTS</h1>
 
 <entry>
-    <h2>Chromium Extensions</h2>
+    <h2>Chromium</h2>
     <period>
         <from>
             <span></span>
@@ -179,10 +179,14 @@ Proposed a vulnerability analysis methodology targeting Epic Games’ Unreal Eng
     </period>
 </entry>
 
-<a href="https://issues.chromium.org/issues/536512612">`CVE-2026-19165`</a> 
-<a href="https://issues.chromium.org/issues/536676756">`CVE-2026-19558`</a>
-<a href="https://issues.chromium.org/issues/538798091">`538798091`</a>
-<a href="https://issues.chromium.org/issues/548611433">`548611433`</a>
+<a href="https://crbug.com/536512612">`CVE-2026-19165`</a> 
+<a href="https://crbug.com/536676756">`CVE-2026-19558`</a>
+<a href="https://crbug.com/538798091">`538798091`</a>
+<a href="https://crbug.com/548611433">`CVE-2026-95344`</a>
+<a href="https://crbug.com/557523002">`CVE-2026-95286`</a>
+<a href="https://crbug.com/552870313">`552870313`</a>
+<a href="https://crbug.com/553253397">`553253397`</a>
+<a href="https://crbug.com/553309390">`553309390`</a>
 
 <entry>
     <h2>CompactX</h2>

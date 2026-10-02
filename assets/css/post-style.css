@@ -128,6 +128,11 @@ hr {
 	display: none;
 	margin: 10px;
 }
+iframe {
+	border-radius: 10px;
+	display: block;
+	margin: auto;
+}
 
 /* Fade in */
 .toc a {
@@ -199,6 +204,7 @@ hr {
 	color: #fff;
 	box-sizing: border-box;
 	max-width: calc(980px * var(--var-zoom));
+	text-align: center;
 }
 .entry-header-thumb {
 	display: flex;
@@ -713,7 +719,6 @@ section.container {
 	width: 30px;
 	height: 30px;
 	background-color: #eee;
-	margin-left: auto;
 	transition: background 1s;
 }
 .toc_btn:hover {
@@ -740,8 +745,8 @@ section.container {
 	/* width: calc(((100% - (980px * var(--var-zoom))) / 2) * 0.8); */
 	/* margin-left: calc(((100% - (980px * var(--var-zoom))) / 2) * 0.1); */
 	/* margin-left: calc((11 * 100% + 9 * (980px * var(--var-zoom))) / 20); */
-	margin-left: auto;
-	margin-right: 15px;
+	margin-left: 15px;
+	margin-right: auto;
 	max-height: 700px;
 	overflow-y: scroll;
 	z-index: 300;
@@ -1844,12 +1849,13 @@ section.container {
 	margin: 0 0 22px 22px;
 }
 .entry-content blockquote {
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 	padding: 16px 20px;
 	border-left: 4px solid #e6e6e6;
 }
 .entry-content blockquote p {
 	margin: 22px 0 0;
+	color: #666666;
 }
 .entry-content blockquote p:first-child {
 	margin-top: 0;
@@ -2378,6 +2384,9 @@ section.container {
 
 /* Media Screen - Mobie */
 @media screen and (max-width:767px) {
+	.entry-header h1 {
+		padding: 0;
+	}
 	.entry-header-thumb ul {
     	flex-direction: column !important;
 	}
@@ -2771,6 +2780,15 @@ sidenote code {
 	}
 	sidenote code {
 		background-color: #e0e0e0;
+	}
+
+	.toc {
+		margin-left: auto;
+		margin-right: 15px;
+	}	
+
+	.toc_btn {
+		margin-left: auto;
 	}
 }
 
