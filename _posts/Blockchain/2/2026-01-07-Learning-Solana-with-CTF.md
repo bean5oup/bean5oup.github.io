@@ -49,6 +49,8 @@ Since I'm writing this write-up while also studying Rust, it might be a bit all 
 
 # Dev Cave CTF 2025
 
+<img src="/Category/Blockchain/2/img/32.png" alt="" width="800">
+
 ## pwn/wallet-king
 
 The Makefile uses `cargo build-sbf` to build. You can enable or disable specific features with `cargo build-sbf --features no-entrypoint`, or set `default = ["no-entrypoint"]` in `Cargo.toml` to enable it by default. This prevents the entrypoint from being compiled, allowing the code to be used as a library or interface.

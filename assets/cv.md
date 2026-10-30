@@ -187,6 +187,8 @@ Proposed a vulnerability analysis methodology targeting Epic Games’ Unreal Eng
 <a href="https://crbug.com/552870313">`552870313`</a>
 <a href="https://crbug.com/553253397">`553253397`</a>
 <a href="https://crbug.com/553309390">`553309390`</a>
+<a href="https://crbug.com/576225189">`576225189`</a>
+<a href="https://crbug.com/576943246">`576943246`</a>
 
 <entry>
     <h2>CompactX</h2>
